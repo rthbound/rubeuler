@@ -5,5 +5,17 @@ module Rubeuler
       @data = options[:data]
       @runtime = options[:runtime]
     end
+
+    def data
+      @data
+    end
+
+    def runtime
+      @runtime
+    end
+
+    def successful?
+      !!@success
+    end
   end
 end
