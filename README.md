@@ -17,6 +17,9 @@ If the answer to problem one is 42, the code below should produce a successful r
 ```ruby
 Rubeuler::Problem.new(number: 1, answer: "7*3*2").execute!
 ```
+
+__NOTE__: Solutions (see Rubeuler::Solution) are not provided for you. Successfully solve some ProjectEuler problems to build your own list, then use Rubeuler to judge the quality of your solutions.
+
 ### Pull requests/issues
 
 Please submit any useful pull requests through GitHub. I expect bugs, please report them with the issue tracker! Thanks.

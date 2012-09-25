@@ -1,6 +1,8 @@
 require 'benchmark'
 
 module Rubeuler
+  include Solution
+
   class Problem < ::Rubeuler::Base
     def initialize(options)
       load_options(:number, :answer, options)
@@ -8,7 +10,7 @@ module Rubeuler
 
     def execute!
       time = Benchmark.measure { @data = answer }.real
-      true_or_false = @data == solutions[@number.to_s] ? true : false
+      true_or_false = @data == solution ? true : false
 
       return Rubeuler::Result.new(success: true_or_false, problem: @number, data: @data, runtime: time)
     end
@@ -18,16 +20,8 @@ module Rubeuler
       instance_eval(@answer.gsub("\n",";"))
     end
 
-    def solutions
-      {
-        "1" => 0,
-        "2" => 0,
-        "3" => 0,
-        "4" => 0,
-        "5" => 0,
-        "6" => 0,
-        "7" => 0
-      }
+    def solution
+      Rubeuler::Solution.for_problem(@number)
     end
   end
 end

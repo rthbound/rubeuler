@@ -1,4 +1,6 @@
-require "rubeuler/base"
-require "rubeuler/problem"
-require "rubeuler/result"
 require "rubeuler/version"
+require "rubeuler/result"
+require "rubeuler/base"
+require "rubeuler/solution"
+require "rubeuler/problem"
+
