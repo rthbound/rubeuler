@@ -8,6 +8,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Tad Hosford"]
   s.email       = ["tad.hosford@gmail.com"]
   s.homepage    = "http://github.com/rthbound/rubeuler"
+  s.description = %q{ For Rubyists who love ProjectEuler.net }
   s.summary     = %q{Evaluates whether a block produces a predefined response. Returns diagnostics if the block's return value was expected.}
 
   s.files         = `git ls-files`.split("\n")
