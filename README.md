@@ -24,9 +24,9 @@ Extra options (just one right now):
 ```ruby
 Rubeuler::Problem.new(number: 1, answer: "@foo, @baz = :bar, :bat; 0", tracked: {foo: "@foo", baz: "@baz"}).execute!
 => #<Rubeuler::Result:0x007ff3bc3f8f10
- @data={:solution=>1, :foo=>:bar, :baz=>:bat},
+ @data={:solution=>0, :foo=>:bar, :baz=>:bat},
  @runtime=9.059906005859375e-06,
- @success=false>
+ @success=true>
 ```
 
 ### Pull requests/issues
