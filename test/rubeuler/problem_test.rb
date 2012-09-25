@@ -2,7 +2,7 @@ require "minitest_helper"
 require "rubeuler"
 
 describe Rubeuler::Problem do
-  describe ".sexecute!" do
+  describe ".execute!" do
     it "returns a result" do
       Rubeuler::Problem.new(number: 1, answer: "0").execute!.must_be_kind_of(Rubeuler::Result)
     end
