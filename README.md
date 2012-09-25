@@ -20,6 +20,15 @@ Rubeuler::Problem.new(number: 1, answer: "7*3*2").execute!
 
 __NOTE__: Solutions (see Rubeuler::Solution) are not provided for you. Successfully solve some ProjectEuler problems to build your own list, then use Rubeuler to judge the quality of your solutions.
 
+Extra options (just one right now):
+```ruby
+Rubeuler::Problem.new(number: 1, answer: "@foo, @baz = :bar, :bat; 0", tracked: {foo: "@foo", baz: "@baz"}).execute!
+=> #<Rubeuler::Result:0x007ff3bc3f8f10
+ @data={:solution=>1, :foo=>:bar, :baz=>:bat},
+ @runtime=9.059906005859375e-06,
+ @success=false>
+```
+
 ### Pull requests/issues
 
 Please submit any useful pull requests through GitHub. I expect bugs, please report them with the issue tracker! Thanks.
