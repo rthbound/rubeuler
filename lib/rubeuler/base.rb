@@ -6,6 +6,8 @@ module Rubeuler
 
     def load_options(*option_names, options)
       option_names.each{|o| load_option(o, options) }
+
+      option_names << instance_variable_set("@tracked", options[:tracked]) if options[:tracked]
     end
   end
 end

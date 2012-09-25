@@ -5,3 +5,5 @@
 0.0.3 - Moved Rubeuler::Problem#solutions to Rubeuler::Solution#for_problem to make the intended use more intuitive
 
 0.0.4 - Add tests using minitest
+
+0.0.5 - Improve on tests, improve timer by moving Benchmark closer to code being evaluated
