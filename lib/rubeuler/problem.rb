@@ -6,6 +6,7 @@ module Rubeuler
   class Problem < ::Rubeuler::Base
     def initialize(options)
       load_options(:number, :answer, options)
+      raise TypeError, ':answer should be a string' unless @answer.is_a?(String)
     end
 
     def execute!
