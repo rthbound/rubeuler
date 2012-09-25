@@ -7,18 +7,20 @@ module Rubeuler
     def initialize(options)
       load_options(:number, :answer, options)
       raise TypeError, ':answer should be a string' unless @answer.is_a?(String)
+      raise TypeError, ':number should be an integer' unless @number.is_a?(Fixnum)
     end
 
     def execute!
-      time = Benchmark.measure { @data = answer }.real
+      time = timed_answer
       true_or_false = @data == solution ? true : false
 
       return Rubeuler::Result.new(success: true_or_false, problem: @number, data: @data, runtime: time)
     end
 
     private
-    def answer
-      instance_eval(@answer.gsub("\n",";"))
+    def timed_answer
+      timer_endpoints = ["Benchmark.measure { @data =", "}.real"]
+      instance_eval(timer_endpoints.join(@answer.gsub("\n",";")))
     end
 
     def solution
