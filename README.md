@@ -1,4 +1,4 @@
-Rubeuler
+Rubeuler (sounds like rube-oiler)
 ========
 
 For Rubyists who enjoy solving and optimizing [Project Euler](http://www.projecteuler.net) problems. It uses `Benchmark` so be sure to use this with Ruby >= 1.9.3
