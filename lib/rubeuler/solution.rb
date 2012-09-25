@@ -9,7 +9,7 @@ module Rubeuler
         "5" => 0,
         "6" => 0,
         "7" => 0
-      }[number.to_s]
+      }.fetch(number.to_s) { raise RuntimeError.new("Undefined solution for problem: #{number.to_s}") }
     end
   end
 end
