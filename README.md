@@ -18,16 +18,20 @@ If the answer to problem one is 42, the code below should produce a successful r
 Rubeuler::Problem.new(number: 1, answer: "7*3*2").execute!
 ```
 
-__NOTE__: Solutions (see Rubeuler::Solution) are not provided for you. Successfully solve some ProjectEuler problems to build your own list, then use Rubeuler to judge the quality of your solutions.
-
 Extra options (just one right now):
 ```ruby
-Rubeuler::Problem.new(number: 1, answer: "@foo, @baz = :bar, :bat; 0", tracked: {foo: "@foo", baz: "@baz"}).execute!
-=> #<Rubeuler::Result:0x007ff3bc3f8f10
- @data={:solution=>0, :foo=>:bar, :baz=>:bat},
- @runtime=9.059906005859375e-06,
- @success=true>
+    answer = "@loop_count = 0; 1001.times do; @loop_count += 1; end; result = 42"  
+
+		# Use :tracked option to track extra variables included in your algorithm
+    Rubeuler::Problem.new(number: 1, answer: answer, tracked: {loop_count: "@loop_count"}).execute!
+    => #<Rubeuler::Result:0x007fef81c221f8
+      @data={:solution=>42, :loop_count=>1001},
+      @runtime=0.0002689361572265625,
+      @success=true>
 ```
+
+__NOTE__: Solutions (see Rubeuler::Solution) are not provided for you. Successfully solve some ProjectEuler problems to build your own list, then use Rubeuler to judge the quality of your solutions.
+__NOTE__: The last expression in the `:answer` argument will be compared to solution predefined in `Rubeuler::Solution` for that problem number.
 
 ### Pull requests/issues
 

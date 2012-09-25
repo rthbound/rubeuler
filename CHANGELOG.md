@@ -7,5 +7,7 @@
 0.0.4 - Add tests using minitest
 
 0.0.5 - Feature: Track other variables... the options `tracked: {foo: @foo}` would track a variable set as `@foo` in Rubeuler::Problem's `:answer` argument
-				Improve on tests, improve timer by moving Benchmark closer to code being evaluated,
+				Improve on tests, improve timer by moving Benchmark closer to code being evaluated
+
+0.0.6 - Reverting the change to the Benchmark implementation from 0.0.5
         

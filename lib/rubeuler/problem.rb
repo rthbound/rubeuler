@@ -19,8 +19,7 @@ module Rubeuler
 
     private
     def timed_answer
-      timer_endpoints = ["Benchmark.measure { @data =", "}.real"]
-      instance_eval(timer_endpoints.join(@answer.gsub("\n",";")))
+      timer_endpoints = Benchmark.measure { @data = instance_eval(@answer.gsub("\n",";"))}.real
     end
 
     def solution
