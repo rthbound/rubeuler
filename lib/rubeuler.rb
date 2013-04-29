@@ -1,6 +1,5 @@
 require "rubeuler/version"
-require "rubeuler/result"
-require "rubeuler/base"
 require "rubeuler/solution"
 require "rubeuler/problem"
-
+require "pay_dirt/use_case"
+require "pay_dirt/result"

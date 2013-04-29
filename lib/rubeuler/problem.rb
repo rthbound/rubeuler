@@ -3,18 +3,23 @@ require 'benchmark'
 module Rubeuler
   include Solution
 
-  class Problem < ::Rubeuler::Base
+  class Problem
+    include PayDirt::UseCase
+
     def initialize(options)
       load_options(:number, :answer, options)
+
       raise TypeError, ':answer should be a string' unless @answer.is_a?(String)
       raise TypeError, ':number should be an integer' unless @number.is_a?(Fixnum)
+
+
     end
 
     def execute!
       time = timed_answer
       true_or_false = @data == solution ? true : false
 
-      return Rubeuler::Result.new(success: true_or_false, problem: @number, data: data, runtime: time)
+      return PayDirt::Result.new(success: true_or_false, problem: @number, data: data, runtime: time)
     end
 
     private
