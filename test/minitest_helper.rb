@@ -1,5 +1,4 @@
 # Testing frameworks
-require "minitest/spec"
 require "minitest/autorun"
 require "pay_dirt/use_case"
 require "pay_dirt/result"
