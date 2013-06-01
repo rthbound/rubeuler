@@ -1,4 +1,4 @@
-Rubeuler (sounds like rube-oiler)
+Rubeuler (sounds like rube-oiler)[![Gem Version](https://badge.fury.io/rb/Rubeuler.png)](http://badge.fury.io/rb/Rubeuler)[![Build Status](https://travis-ci.org/rthbound/rubeuler.png?branch=master)](https://travis-ci.org/rthbound/rubeuler)
 ========
 
 For Rubyists who enjoy solving and optimizing [Project Euler](http://www.projecteuler.net) problems. It uses `Benchmark` so be sure to use this with Ruby >= 1.9.3
