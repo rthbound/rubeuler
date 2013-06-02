@@ -1,3 +1,5 @@
+require 'coveralls'
+Coveralls.wear!
 # Testing frameworks
 require "minitest/autorun"
 require "pay_dirt/use_case"
