@@ -1,5 +1,8 @@
-Rubeuler (sounds like rube-oiler)[![Gem Version](https://badge.fury.io/rb/Rubeuler.png)](http://badge.fury.io/rb/Rubeuler)[![Build Status](https://travis-ci.org/rthbound/rubeuler.png?branch=master)](https://travis-ci.org/rthbound/rubeuler)
+Rubeuler (sounds like rube-oiler)
 ========
+
+[![Gem Version](https://badge.fury.io/rb/Rubeuler.png)](http://badge.fury.io/rb/Rubeuler)[![Build Status](https://travis-ci.org/rthbound/rubeuler.png?branch=master)](https://travis-ci.org/rthbound/rubeuler) [![Coverage Status](https://coveralls.io/repos/rthbound/rubeuler/badge.png?branch=master)](https://coveralls.io/r/rthbound/rubeuler?branch=master)
+
 
 For Rubyists who enjoy solving and optimizing [Project Euler](http://www.projecteuler.net) problems. It uses `Benchmark` so be sure to use this with Ruby >= 1.9.3
 
