@@ -1,5 +1,6 @@
-Rubeuler (sounds like rube-oiler)
+Rubeuler
 ========
+[![Leonhard Euler](http://upload.wikimedia.org/wikipedia/commons/c/cc/Euler%27s_signature.png)]
 
 [![Gem Version](https://badge.fury.io/rb/Rubeuler.png)](http://badge.fury.io/rb/Rubeuler)[![Build Status](https://travis-ci.org/rthbound/rubeuler.png?branch=master)](https://travis-ci.org/rthbound/rubeuler) [![Coverage Status](https://coveralls.io/repos/rthbound/rubeuler/badge.png?branch=master)](https://coveralls.io/r/rthbound/rubeuler?branch=master)[![Code Climate](https://codeclimate.com/github/rthbound/rubeuler.png)](https://codeclimate.com/github/rthbound/rubeuler)
 
