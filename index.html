@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Rubeuler by rthbound</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Rubeuler</h1>
+        <p>For Rubyists who love ProjectEuler.net and enjoy optimizing their solutions</p>
+
+        <p class="view"><a href="https://github.com/rthbound/rubeuler">View the Project on GitHub <small>rthbound/rubeuler</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/rthbound/rubeuler/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/rthbound/rubeuler/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/rthbound/rubeuler">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="rubeuler" class="anchor" href="#rubeuler"><span class="octicon octicon-link"></span></a>Rubeuler</h1>
+
+<p><a href="http://badge.fury.io/rb/Rubeuler"><img src="https://badge.fury.io/rb/Rubeuler.png" alt="Gem Version"></a><a href="https://travis-ci.org/rthbound/rubeuler"><img src="https://travis-ci.org/rthbound/rubeuler.png?branch=master" alt="Build Status"></a> <a href="https://coveralls.io/r/rthbound/rubeuler?branch=master"><img src="https://coveralls.io/repos/rthbound/rubeuler/badge.png?branch=master" alt="Coverage Status"></a><a href="https://codeclimate.com/github/rthbound/rubeuler"><img src="https://codeclimate.com/github/rthbound/rubeuler.png" alt="Code Climate"></a></p>
+
+<p>For Rubyists who enjoy solving and optimizing <a href="http://www.projecteuler.net">Project Euler</a> problems. It uses <code>Benchmark</code> so be sure to use this with Ruby &gt;= 1.9.3</p>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Rubeuler is a Ruby gem, and can be installed using <code>gem install rubeuler</code></p>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>The <code>Rubeuler::Problem</code> class should be initialized with two arguments, <code>:number</code> &amp; <code>:answer</code> (problem designator and some ruby code as a string).
+If the answer to problem one is 42, the code below should produce a successful response</p>
+
+<div class="highlight"><pre><span class="ss">Rubeuler</span><span class="p">:</span><span class="ss">:Problem</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="ss">number</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="ss">answer</span><span class="p">:</span> <span class="s2">"7*3*2"</span><span class="p">)</span><span class="o">.</span><span class="n">execute!</span>
+</pre></div>
+
+<p>Extra options (just one right now):</p>
+
+<div class="highlight"><pre>    <span class="n">answer</span> <span class="o">=</span> <span class="s2">"@loop_count = 0; 1001.times do; @loop_count += 1; end; result = 42"</span>  
+
+    <span class="c1"># Use :tracked option to track extra variables included in your algorithm</span>
+    <span class="ss">Rubeuler</span><span class="p">:</span><span class="ss">:Problem</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="ss">number</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="ss">answer</span><span class="p">:</span> <span class="n">answer</span><span class="p">,</span> <span class="ss">tracked</span><span class="p">:</span> <span class="p">{</span><span class="n">loop_count</span><span class="p">:</span> <span class="s2">"@loop_count"</span><span class="p">})</span><span class="o">.</span><span class="n">execute!</span>
+    <span class="o">=&gt;</span> <span class="c1">#&lt;Rubeuler::Result:0x007fef81c221f8</span>
+      <span class="vi">@data</span><span class="o">=</span><span class="p">{</span><span class="ss">:solution</span><span class="o">=&gt;</span><span class="mi">42</span><span class="p">,</span> <span class="ss">:loop_count</span><span class="o">=&gt;</span><span class="mi">1001</span><span class="p">},</span>
+      <span class="vi">@runtime</span><span class="o">=</span><span class="mi">0</span><span class="o">.</span><span class="mo">00026</span><span class="mi">89361572265625</span><span class="p">,</span>
+      <span class="vi">@success</span><span class="o">=</span><span class="kp">true</span><span class="o">&gt;</span>
+</pre></div>
+
+<p><strong>NOTE</strong>: Solutions (see Rubeuler::Solution) are not provided for you. Successfully solve some ProjectEuler problems to build your own list, then use Rubeuler to judge the quality of your solutions.
+<strong>NOTE</strong>: The last expression in the <code>:answer</code> argument will be compared to solution predefined in <code>Rubeuler::Solution</code> for that problem number.</p>
+
+<h3>
+<a name="pull-requestsissues" class="anchor" href="#pull-requestsissues"><span class="octicon octicon-link"></span></a>Pull requests/issues</h3>
+
+<p>Please submit any useful pull requests through GitHub. I expect bugs, please report them with the issue tracker! Thanks.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/rthbound">rthbound</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
