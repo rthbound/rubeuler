@@ -10,7 +10,7 @@ For Rubyists who enjoy solving and optimizing [Project Euler](http://www.project
 Installation
 ------------
 
-Rubeuler is a Ruby gem, and can be installed using `gem install rubeuler`
+Rubeuler is a Ruby gem, and can be installed using `gem install Rubeuler`
 
 Usage
 -----
@@ -24,7 +24,7 @@ Rubeuler::Problem.new(number: 1, answer: "7*3*2").execute!
 
 Extra options (just one right now):
 ```ruby
-    answer = "@loop_count = 0; 1001.times do; @loop_count += 1; end; result = 42"  
+    answer = "@loop_count = 0; 1001.times do; @loop_count += 1; end; result = 42"
 
 		# Use :tracked option to track extra variables included in your algorithm
     Rubeuler::Problem.new(number: 1, answer: answer, tracked: {loop_count: "@loop_count"}).execute!
@@ -39,4 +39,4 @@ __NOTE__: The last expression in the `:answer` argument will be compared to solu
 
 ### Pull requests/issues
 
-Please submit any useful pull requests through GitHub. I expect bugs, please report them with the issue tracker! Thanks.
+Please submit any pull requests through GitHub. Please report any problems with the issue tracker! Thanks.
