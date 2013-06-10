@@ -11,20 +11,18 @@ module Rubeuler
 
       raise TypeError, ':answer should be a string' unless @answer.is_a?(String)
       raise TypeError, ':number should be an integer' unless @number.is_a?(Fixnum)
-
-
     end
 
     def execute!
       time = timed_answer
       true_or_false = @data == solution ? true : false
 
-      return PayDirt::Result.new(success: true_or_false, problem: @number, data: data, runtime: time)
+      return PayDirt::Result.new(success: true, problem: @number, data: data)
     end
 
     private
     def timed_answer
-      timer_endpoints = Benchmark.measure { @data = instance_eval(@answer.gsub("\n",";"))}.real
+      @benchmark = Benchmark.measure { @data = instance_eval(@answer.gsub("\n",";"))}.real
     end
 
     def solution
@@ -33,8 +31,10 @@ module Rubeuler
 
     def data
       result_data = {
-        solution: @data
+        solution: @data,
+        benchmark: @benchmark
       }
+
       @tracked.each { |k,v| result_data.merge!({ k => instance_eval(v.to_s) }) } if @tracked
 
       result_data
